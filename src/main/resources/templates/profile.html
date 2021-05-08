@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body background="images/f2.jpg">
+<div class="container">
+<h1 style="text-align:center;">Inregistrare</h1>
+
+<form name="addPersonForm" th:action="@{/addPerson}" method="POST">
+
+    <table style="margin-left:auto;margin-right:auto">
+        <tr>
+            <td><b>Name:</b></td>
+            <td><input type="text" id="name" name="name" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><b>Email:</b></td>
+            <td><input type="text" id="email" name="email" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><b>Password:</b></td>
+            <td><input type="password" id="password" name="password" class="form-control"></td>
+        </tr>
+    </table>
+
+
+    <button type="submit" style="margin:auto;display:block" class="btn btn-info col-2">Add person</button>
+
+</form>
+
+<div style="text-align: center">
+    <a href="/app/login">Log in</a>
+</div>
+</div>
+</body>
+</html>

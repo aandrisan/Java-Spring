@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <link type="text/css" href="css/home.css"> -->
+</head>
+
+<style>
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        background-color: #f2f2f2;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .about {
+        background-color: #33d6ff;
+        color: #fff;
+        height: calc(100% - 60pt);
+        padding-top: 100pt;
+        display: flex;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    .inner-about {
+        width: 100%;
+        max-width: 600pt;
+        padding: 10pt;
+    }
+    .inner-about h1 {
+        margin: 0;
+        font-size: 35pt;
+        margin-bottom: -10pt;
+    }
+    .inner-about p {
+        margin: 0;
+        margin-bottom: 8pt;
+        font-size: 15pt;
+    }
+
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+    }
+    table thead tr {
+        background-color: #ddd;
+    }
+    table tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: .35em;
+    }
+
+    table th,
+    table td {
+        padding: .625em;
+        text-align: center;
+    }
+
+    table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+</style>
+
+<body>
+
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+
+<div class="menu">
+    <a href="/blog">Blog</a>
+    <a href="/tufisi">Tufisi Page</a>
+    <a href="/projects">Projects</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+</div>
+
+<div class="about">
+
+
+    <div class="inner-about">
+
+        <table>
+            <caption>Statement Summary</caption>
+            <thead>
+            <tr class="active-tr">
+                <th scope="col">Account</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Period</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Account">Visa - 3412</td>
+                <td data-label="Due Date">04/01/2016</td>
+                <td data-label="Amount">$1,190</td>
+                <td data-label="Period">03/01/2016 - 03/31/2016</td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Account">Visa - 6076</td>
+                <td data-label="Due Date">03/01/2016</td>
+                <td data-label="Amount">$2,443</td>
+                <td data-label="Period">02/01/2016 - 02/29/2016</td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Account">Corporate AMEX</td>
+                <td data-label="Due Date">03/01/2016</td>
+                <td data-label="Amount">$1,181</td>
+                <td data-label="Period">02/01/2016 - 02/29/2016</td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Acount">Visa - 3412</td>
+                <td data-label="Due Date">02/01/2016</td>
+                <td data-label="Amount">$842</td>
+                <td data-label="Period">01/01/2016 - 01/31/2016</td>
+            </tr>
+            <tr>
+                <td scope="row" data-label="Acount">Visa - 8888</td>
+                <td data-label="Due Date">08/08/2018</td>
+                <td data-label="Amount">$888</td>
+                <td data-label="Period">08/08/2018 - 08/31/2018</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+</body>
+</html>
+

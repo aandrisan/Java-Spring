@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body background="images/f2.jpg">
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/app/listMovies">Movies</a>
+        <a href="/app/listActors">Actors</a>
+        <a href="/app/listDirectors">Directors</a>
+    </nav>
+
+<table border="1" class = "table table-striped table-responsive-md" style="font-weight:bold;background-color: white" >
+    <tr id="header">
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Birth Date</th>
+    </tr>
+    <tr th:each="director : ${listDirectors}">
+        <td><img th:src="${director.image}"  width="200" height="250"/></td>
+        <td th:text="${director.name}"></td>
+        <td th:text="${director.birthDate}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

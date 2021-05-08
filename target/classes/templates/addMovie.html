@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Movie</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body background="images/f2.jpg">
+<div class="container">
+    <h1 style="text-align:center;">Add Movie</h1>
+
+    <form name="addMovieForm" th:action="@{/addMovieF}" method="POST">
+
+        <table style="margin-left:auto;margin-right:auto">
+            <tr>
+                <td><b>Name:</b></td>
+                <td><input type="text" id="name" name="name" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><b>Image:</b></td>
+                <td><input type="text" id="image" name="image" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><b>Release Date:</b></td>
+                <td><input type="text" id="releaseDate" name="releaseDate" class="form-control"></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <table border="1" class = "table table-striped table-responsive-md" style="font-weight:bold;background-color: white">
+            <tr>
+                <th>Selectie</th>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Birth Date</th>
+            </tr>
+            <tr th:each="actor : ${listActors}">
+                <td th:align="center"><input type="checkbox" id="id" name="idActors" th:value="${actor.id}"></td>
+                <td><img th:src="${actor.image}" width="200" height="250"/></td>
+                <td th:text="${actor.name}"></td>
+                <td th:text="${actor.birthDate}"></td>
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <table border="1" class = "table table-striped table-responsive-md" style="font-weight:bold;background-color: white" >
+            <tr>
+                <th>Selectie</th>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Birth Date</th>
+            </tr>
+            <tr th:each="director : ${listDirectors}">
+                <td><input type="checkbox" id="id" name="idDirector" th:value="${director.id}"></td>
+                <td><img th:src="${director.image}"  width="200" height="250"/></td>
+                <td th:text="${director.name}"></td>
+                <td th:text="${director.birthDate}"></td>
+            </tr>
+
+        </table>
+        <button type="submit" style="margin:auto;display:block" class="btn btn-info col-2">Add Movie</button>
+
+    </form>
+
+    <div style="text-align: center">
+        <a href="/app/operationMovies">Back</a>
+    </div>
+</div>
+</body>
+</html>

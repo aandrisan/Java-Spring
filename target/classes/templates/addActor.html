@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Actor</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body background="images/f2.jpg">
+<div class="container">
+    <h1 style="text-align:center;">Add Actor</h1>
+
+    <form name="addActorForm" th:action="@{/addActorF}" method="POST">
+
+        <table style="margin-left:auto;margin-right:auto">
+            <tr>
+                <td><b>Name:</b></td>
+                <td><input type="text" id="name" name="name" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><b>Image:</b></td>
+                <td><input type="text" id="image" name="image" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><b>Birth Date:</b></td>
+                <td><input type="text" id="birthDate" name="birthDate" class="form-control"></td>
+            </tr>
+        </table>
+
+
+        <button type="submit" style="margin:auto;display:block" class="btn btn-info col-2">Add director</button>
+
+    </form>
+
+    <div style="text-align: center">
+        <a href="/app/operationActors">Back</a>
+    </div>
+</div>
+</body>
+</html>

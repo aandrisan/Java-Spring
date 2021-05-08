@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ListUsers</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body background="images/f2.jpg">
+<div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/app/listUsers">Users</a>
+        <a href="/app/operationMovies">Movies</a>
+        <a href="/app/operationActors">Actors</a>
+        <a href="/app/operationDirectors">Directors</a>
+    </nav>
+
+<table border="1" class = "table table-striped table-responsive-md" style="font-weight:bold;background-color: white">
+    <tr id="header">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Creation Date</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="user : ${listUsers}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.creationDate}"></td>
+        <td><a th:href="@{/delete_user(personId=${user.id})}" class="btn btn-danger">Delete </a>
+            <a th:href="@{/update_user/{id}(id=${user.id})}" class="btn btn-primary">Update</a>
+        </td>
+    </tr>
+
+</table>
+</div>
+</body>
+</html>
